@@ -2,8 +2,8 @@ require 'rails/railtie'
 
 module SunspotResque
   class Railtie < Rails::Railtie
-    unless ENV['DISABLE_SUNSPOT_RESQUE']
-      initializer 'sunspot_resque.load_sunspot_session_proxy' do
+    initializer 'sunspot_resque.load_sunspot_session_proxy' do
+      unless ENV['DISABLE_SUNSPOT_RESQUE']
         Sunspot.session = SessionProxy.new(Sunspot.session)
       end
     end
