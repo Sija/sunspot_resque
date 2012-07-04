@@ -1,6 +1,8 @@
-# SunspotResque
+# Sunspot::Resque
 
-TODO: Write a gem description
+This gem employs solution provided by [Andrew Evans](http://stdout.heyzap.com/2011/08/17/sunspot-resque-session-proxy/).
+
+Rails 3 only gem.
 
 ## Installation
 
@@ -18,7 +20,9 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+After adding this gem to the `Gemfile` your `Sunspot.session` will be automatically proxied.
+It's disabled though for all rake tasks as it's what you'd want in most cases.
+In all others you can use `DISABLE_SUNSPOT_RESQUE` ENV variable to `false`.
 
 ## Contributing
 
@@ -27,3 +31,8 @@ TODO: Write usage instructions here
 3. Commit your changes (`git commit -am 'Added some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+## Credits
+
+* Sijawusz Pur Rahnama
+* Andrew Evans
